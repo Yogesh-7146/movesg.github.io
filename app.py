@@ -1,5 +1,7 @@
+import waitress
 from graph import load_graph, shortest_path
 from flask import Flask, request, render_template, jsonify
+import os
 
 stations = load_graph('static/stn.json')
 app = Flask(__name__)
@@ -7,6 +9,7 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     return render_template('index.html')
+    
 
 @app.route('/api/v1/')
 def api():
@@ -17,4 +20,8 @@ def api():
     else:
         return jsonify({'route': route}), 200
 
-app.run(debug=True)
+if __name__ == "__main__":
+     app.debug = False
+     port = int(os.environ.get('PORT', 33507))
+     waitress.serve(app, port=port)
+     app.run
