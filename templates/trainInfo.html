@@ -1,0 +1,266 @@
+<html>
+	<head> 
+	<link rel="stylesheet" href="{{ url_for('static', filename='table.css')}}">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style>
+	* {
+		font-family: sans-serif;
+	}
+
+	.heading{
+		padding: 0.1px;
+		margin: 15px 0;
+		background-color: #009879;
+		color: #ffffff;
+		font-size: 20px;
+		font-weight: bold;
+		text-align: center;
+		border-radius: 5px 5px 5px 5px;
+		box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+	}
+
+	.content-table {
+		border-collapse: collapse;
+		margin-left: auto;
+  		margin-right: auto;
+		font-size: 0.9em;
+		min-width: 400px;
+		border-radius: 5px 5px 0 0;
+		overflow: hidden;
+		box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+	}
+	
+	.content-table thead tr {
+		background-color: #009879;
+		color: #ffffff;
+		text-align: left;
+		font-weight: bold;
+	}
+	
+	.content-table th,
+	.content-table td {
+		padding: 11px 15px;
+	}
+	
+	.content-table tbody tr {
+		border-bottom: 1px solid #dddddd;
+	}
+	
+	.content-table tbody tr:nth-of-type(even) {
+		background-color: #f3f3f3;
+	}
+	
+	.content-table tbody tr:last-of-type {
+		border-bottom: 2px solid #009879;
+	}
+	
+	.content-table tbody tr.active-row {
+		font-weight: bold;
+		color: #009879;
+	}
+		
+	</style>
+	<body>
+		<button onclick="history.back()">⏪Back</button>
+		<div class = "heading">
+			<p>First/Last train service terminating at NS1 EW24 Jurong East</p>
+		</div>
+		<table class="content-table">
+			<thead>
+			  	<tr>
+				<th>Day</th>
+				<th>First Train</th>
+				<th>Last Train</th>
+			  	</tr>
+			</thead>
+			<tbody>
+				<tr>
+				<td>Monday - Thursday</td>
+				<td>05:35</td>
+				<td>00:37</td>
+				</tr>
+				<tr class="active-row">
+				<td>Friday</td>
+				<td>05:35</td>
+				<td>00:37</td>
+				</tr>
+				<tr>
+				<td>Saturday</td>
+				<td>05:35</td>
+				<td>00:37</td>
+				</tr>
+				<tr class="active-row">
+				<td>Sunday</td>
+				<td>05:58</td>
+				<td>00:37</td>
+				</tr>
+				<tr>
+				<td>Public Holidays</td>
+				<td>05:58</td>
+				<td>00:37</td>
+				</tr>
+			</tbody>
+		  </table>
+
+		  <div class = "heading">
+			<p>First/Last train service terminating at NS7 Kranji</p>
+		  </div>
+		  <table class="content-table">
+			<thead>
+				<tr>
+				<th>Day</th>
+				<th>First Train</th>
+				<th>Last Train</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+				<td>Monday - Thursday</td>
+				<td>-</td>
+				<td>00:53</td>
+				</tr>
+				<tr class="active-row">
+				<td>Friday</td>
+				<td>-</td>
+				<td>00:53</td>
+				</tr>
+				<tr>
+				<td>Saturday</td>
+				<td>-</td>
+				<td>00:53</td>
+				</tr>
+				<tr class="active-row">
+				<td>Sunday</td>
+				<td>-</td>
+				<td>00:53</td>
+				</tr>
+				<tr>
+				<td>Public Holidays</td>
+				<td>-</td>
+				<td>00:53</td>
+				</tr>
+			</tbody>
+			</table>
+
+			<div class = "heading">
+				<p>Last train service terminating at NS19 Toa Payoh</p>
+			</div>
+			<table class="content-table">
+				<thead>
+					<tr>
+					<th>Day</th>
+					<th>First Train</th>
+					<th>Last Train</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+					<td>Monday - Thursday</td>
+					<td>-</td>
+					<td>23:53</td>
+					</tr>
+					<tr class="active-row">
+					<td>Friday</td>
+					<td>-</td>
+					<td>23:53</td>
+					</tr>
+					<tr>
+					<td>Saturday</td>
+					<td>-</td>
+					<td>23:53</td>
+					</tr>
+					<tr class="active-row">
+					<td>Sunday</td>
+					<td>-</td>
+					<td>23:53</td>
+					</tr>
+					<tr>
+					<td>Public Holidays</td>
+					<td>-</td>
+					<td>23:53</td>
+				</tr>
+			</tbody>
+		</table>
+		
+		<div class = "heading">
+			<p>Last train service terminating at NS16 Ang Mo Kio</p>
+		</div>
+		<table class="content-table">
+			<thead>
+				<tr>
+				<th>Day</th>
+				<th>First Train</th>
+				<th>Last Train</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+				<td>Monday - Thursday</td>
+				<td>-</td>
+				<td>00:42</td>
+				</tr>
+				<tr class="active-row">
+				<td>Friday</td>
+				<td>-</td>
+				<td>00:42</td>
+				</tr>
+				<tr>
+				<td>Saturday</td>
+				<td>-</td>
+				<td>00:42</td>
+				</tr>
+				<tr class="active-row">
+				<td>Sunday</td>
+				<td>-</td>
+				<td>00:42</td>
+				</tr>
+				<tr>
+				<td>Public Holidays</td>
+				<td>-</td>
+				<td>00:42</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<div class = "heading">
+			<p>First/Last train service terminating at NS28 Marina South Pier</p>
+		</div>
+		<table class="content-table">
+			<thead>
+				<tr>
+				<th>Day</th>
+				<th>First Train</th>
+				<th>Last Train</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+				<td>Monday - Thursday</td>
+				<td>05:29</td>
+				<td>23:11</td>
+				</tr>
+				<tr class="active-row">
+				<td>Friday</td>
+				<td>05:29</td>
+				<td>23:11</td>
+				</tr>
+				<tr>
+				<td>Saturday</td>
+				<td>05:29</td>
+				<td>23:11</td>
+				</tr>
+				<tr class="active-row">
+				<td>Sunday</td>
+				<td>05:45</td>
+				<td>23:11</td>
+				</tr>
+				<tr>
+				<td>Public Holidays</td>
+				<td>05:45</td>
+				<td>23:11</td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>
