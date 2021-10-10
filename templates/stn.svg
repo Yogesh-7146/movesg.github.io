@@ -4,7 +4,7 @@
 <title>Singapore MRT/LRT system map</title>
  <rect id="bg" height="1007" width="1410" y="0" x="0" fill="#ffffff"/>
  <g id="title">
-  <switch><text id="tttitle-ms" x="7.1" y="19" font-size="20" font-weight="bold" fill="#001e0d" font-family="Arial" systemLanguage="ms"><tspan id="trsvg1-ms">PETA SINGAPURA MRT / LRT</tspan></text><text id="tttitle" x="7.1" y="25" font-size="30" font-weight="bold" fill="#001e0d" font-family="Arial"></text></switch>
+  <switch><text id="tttitle-ms" x="7.1" y="19" font-size="20" font-weight="bold" fill="#001e0d" font-family="Arial" systemLanguage="ms"><tspan id="trsvg1-ms">PETA SINGAPURA MRT / LRT</tspan></text></switch>
  </g>
  <g id="legend">
     <rect id="lgbox" height="210" width="250" x="100" y="690" fill="#f2f2f2"></rect>
