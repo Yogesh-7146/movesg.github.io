@@ -14,6 +14,18 @@ def index():
 def trainInfo():
 	return render_template('trainInfo.html')
 
+@app.route('/map/')
+def map():
+	return render_template('map.html')
+
+@app.route('/about/')
+def about():
+	return render_template('about.html')
+
+# @app.route('/suggestions/')
+# def about():
+# 	return render_template('suggestions.html')
+
 @app.route('/api/v1/')
 def api():
 	req = request.args

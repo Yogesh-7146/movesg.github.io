@@ -1,9 +1,11 @@
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>MoveSG</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MoveSG</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
 </head>
 <body>
 	<style>
@@ -15,14 +17,15 @@
 		font-family: 'Poppins', sans-serif;
 	}
 	.wrapper {
-		width: 100%;
+		width: 1170px;
 		margin: auto;
 	}
 	header {
-		background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(https://c0.wallpaperflare.com/preview/1019/232/988/singapore-lrt-mrt-train.jpg);
-		height: 100%;
+		background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(https://c0.wallpaperflare.com/preview/1019/232/988/singapore-lrt-mrt-train.jpg);
+		height: 100vh;
+		-webkit-background-size: cover;
 		background-size: cover;
-		background-position: center;
+		background-position: center center;
 		position: relative;
 	}
 	.nav-area {
@@ -46,11 +49,11 @@
 		color: #333;
 	}
 	.logo {
-		float: center;
+		float: left;
 	}
 	.logo img {
 		width: 100%;
-		padding: 10px 0;
+		padding: 15px 0;
 	}
 	.welcome-text {
 		position: absolute;
@@ -59,20 +62,14 @@
 		margin: 20% 30%;
 		text-align: center;
 	}
-	.welcome-text h1 {
+	.welcome-text h6 {
 		text-align: center;
 		color: #fff;
 		text-transform: uppercase;
-		font-size: 60px;
+
 	}
-	.welcome-text h1:hover{
+	.welcome-text h6 span {
 		color: #00fecb;
-	}
-	.welcome-text h1 span {
-		color: #00fecb;
-	}
-	.welcome-text h1 span:hover {
-		color: #fff;
 	}
 	.welcome-text a {
 		border: 1px solid #fff;
@@ -94,11 +91,10 @@
 			width: 100%;
 		}
 		.logo {
-			background-color: rgba(0, 0, 0, 0.486);
 			float: none;
-  			background-blend-mode: overlay;
-			width: 100%;
+			width: 50%;
 			text-align: center;
+			margin: auto;
 		}
 		img {
 			width: 100%;
@@ -125,21 +121,20 @@
 	}
 	</style>
     <header>
-        <!-- <div class="logo">
-            <img src="Logo/Logo_low.png" width=60 height=60/>
-		</div> -->
     <div class="wrapper">
 		<ul class="nav-area">
-			<li><a href="about/">About</a></li>
-			<li><a href="suggestions.html">Suggestions</a></li>
-			</ul>
-			</div>
-			<div class="welcome-text">
-					<h1>Move<span>SG</span></h1>
-				<a href="map/">Map</a>
-				<a href="trainInfo/">Train Info</a>
-			</div>
+		<li><a href="/">Home</a></li>
+		<li><a href="suggestions/">Suggestions</a></li>
+		</ul>
+	</div>	
+		<div class="welcome-text">
+			<h6>The Aim for <span>MoveSG</span> was to provide tourists get familiarised with shortest Metro Routes<br>Throughout <span>Singapore</span></h6>	
+			<br><h6> Text <span>Text</span></h6>	
+			
+			<br><br><br><br><br><br><br><br><br><br><br><br><br><h6><span>&copy; MoveSG 2021</span></h6>
+		</div>
 	</div>
 	</header>
+
 	</body>
 </html>
