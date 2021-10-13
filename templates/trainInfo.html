@@ -117,7 +117,13 @@
 			border-bottom: none;
 			margin-bottom: 0;
 			padding-bottom: 0;
+			
 		}
+		.dark-mode {
+			background-color: black;
+			color: white;
+		}
+
 	</style>
 	<body>
 		<button class="button" onclick="history.back()">&LessLess;</button>
@@ -4368,7 +4374,6 @@
 				</table>
 			</div>
 			<div id="CityHall" class="data">
-				<button onclick="history.back()">⏪Back</button>
 				<div class = "heading">
 					<h1>City Hall</h1>
 				</div>
@@ -9803,9 +9808,9 @@
 				<table class="content-table">
 					<thead>
 						<tr>
-						<th>Day</th>
-						<th>First Train</th>
-						<th>Last Train</th>
+						 <th>Day</th>
+						 <th>First Train</th>
+						 <th>Last Train</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -17658,6 +17663,17 @@
 		  $("#" + $(this).val()).fadeIn(700);
 		 }).change();
 		});
+		
+		var setTheme = localStorage.getItem('theme');
+		console.log('theme:', setTheme);
+		var element = document.body;
+		user(setTheme);
+		
+		function user(info){
+			if(info=="on"){
+			element.classList.toggle("dark-mode");
+			}
+		}
 	 </script>
 	</body>
 </html>

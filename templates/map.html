@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="description" content=" Click to select your begin and destination stations to plot the route.">
-		<link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
-	</head>
-	<body>
-		<style>
-		.instructions{  
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content=" Click to select your begin and destination stations to plot the route.">
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+
+</head>
+
+<body>
+	<style>
+		body {
+			padding: 25px;
+			background-color: white;
+			color: black;
+			font-size: 25px;
+		}
+
+		.instructions {
 			background-color: #009879;
 			border: none;
 			color: white;
@@ -19,12 +29,13 @@
 			margin: 5px 5px;
 			-webkit-touch-callout: none;
 			-webkit-user-select: none;
-			-khtml-user-select: none; 
+			-khtml-user-select: none;
 			-moz-user-select: none;
-			-ms-user-select: none; 
-            user-select: none;
+			-ms-user-select: none;
+			user-select: none;
 		}
-		.button{
+
+		.button {
 			background-color: #009879;
 			border: none;
 			color: white;
@@ -36,62 +47,92 @@
 			margin: 4px 4px;
 			cursor: pointer;
 			border-radius: 2px;
-		}
-		</style>
-		<button class="button" onclick="history.back()">&LessLess;</button>
-		<div class="instructions">
-			<p><strong>Tap</strong> to select stations<br>
-				<strong>Double Tap</strong> to reset selection</p>
-			</div>
-			<!-- <div id="trainInfoButton">
-				<button href="trainInfo.html" target="" onclick="window.location.href='trainInfo.html'">Train Info</button>
-			</div> -->
-			<div id="from">
-				<style>
-					input[type=text] {
-					width: 140px;
-					box-sizing: border-box;
-					border: 2px solid rgb(0, 189, 196);
-					border-radius: 4px;
-					font-size: 16px;
-					background-color: white;
-					background-image: url('searchicon.png');
-					background-size: 15px;
-					background-position: 10px 13px; 
-					background-repeat: no-repeat;
-					padding: 12px 20px 12px 40px;
-					-webkit-transition: width 0.2s ease-in-out;
-					transition: width 0.2s ease-in-out;
-					margin: 5px 5px;
-				}
 
-				input[type=text]:focus {
-					width: 90%;
-				}
-				.searchWrapper{
-					position: relative;
-				}
-				.searchWrapper::after {
-					content: '🔍';
-					position: absolute;
-					top: 7px;
-					right: 15px;
-				}
-			</style>
-			<input type="text"
-				name="searchBar"
-				id="searchBar"
-				placeholder="From"/><br>
-			<input type="text"
-				name="searchBar"
-				id="searchBar"
-				placeholder="To"/>
-		</div>
-		<!-- <br>&emsp;&emsp;From: <input type="text" id="from" onchange="fromFunction()">
+		}
+
+		.dark-mode {
+			background-color: black;
+			color: white;
+		}
+
+		
+	</style>
+	<button class="button" onclick="history.back()">&LessLess;</button>
+	<div class="instructions">
+		<p><strong>Tap</strong> to select stations<br>
+			<strong>Double Tap</strong> to reset selection
+		</p>
+	</div>
+	<!-- <button onclick="myFunction()">Toggle dark mode</button> -->
+	<div id="from">
+		<style>
+			input[type=text] {
+				width: 140px;
+				box-sizing: border-box;
+				border: 2px solid rgb(0, 189, 196);
+				border-radius: 4px;
+				font-size: 16px;
+				background-color: white;
+				background-image: url('searchicon.png');
+				background-size: 15px;
+				background-position: 10px 13px;
+				background-repeat: no-repeat;
+				padding: 12px 20px 12px 40px;
+				-webkit-transition: width 0.2s ease-in-out;
+				transition: width 0.2s ease-in-out;
+				margin: 5px 5px;
+			}
+
+			input[type=text]:focus {
+				width: 90%;
+			}
+
+			.searchWrapper {
+				position: relative;
+			}
+
+			.searchWrapper::after {
+				content: '🔍';
+				position: absolute;
+				top: 7px;
+				right: 15px;
+			}
+		</style>
+		<input type="text" name="searchBar" id="searchBar" placeholder="From" /><br>
+		<input type="text" name="searchBar" id="searchBar" placeholder="To" />
+	</div>
+	<!-- <br>&emsp;&emsp;From: <input type="text" id="from" onchange="fromFunction()">
 		<br>&emsp;&emsp;To: &emsp;<input type="text" id="to" onchange="toFunction()"><br> -->
-		{% include 'stn.svg' %}
-		<p id="path_id"></p>
-		<p id="bfs"></p>
-		<script src={{ url_for('static', filename='front-end.js' ) }}></script>
-	</body>
+	{% include 'stn.svg' %}
+	<p id="path_id"></p>
+	<p id="bfs"></p>
+	<script src={{ url_for('static', filename='front-end.js' ) }}></script>
+	<script >
+		var setTheme = localStorage.getItem('theme');
+		console.log('theme:', setTheme);
+		var element = document.body;
+		user(setTheme);
+		
+		function user(info){
+			if(info=="on"){
+			element.classList.toggle("dark-mode");
+			}
+		}
+	// 	function myFunction() {	
+	// 		element.classList.toggle("dark-mode");
+	// 		var val = localStorage.getItem('theme')	;
+	// 		if(val=="on"){
+	// 		localStorage.setItem('theme',"off");
+	// 		}
+	// 		else{
+	// 		localStorage.setItem('theme',"on");
+	// 		}
+	// 		console.log('theme:', val);
+	// }
+	
+		</script>
+
+
+</body>
+
 </html>

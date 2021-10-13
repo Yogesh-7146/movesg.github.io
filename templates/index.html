@@ -131,7 +131,7 @@
     <div class="wrapper">
 		<ul class="nav-area">
 			<li><a href="about/">About</a></li>
-			<li><a href="suggestions.html">Suggestions</a></li>
+			<li><a onclick="darktheme()">Theme</a></li>
 			</ul>
 			</div>
 			<div class="welcome-text">
@@ -141,5 +141,29 @@
 			</div>
 	</div>
 	</header>
+
+	<script >
+		var setTheme = localStorage.getItem('theme');
+		console.log('theme:', setTheme);
+		var element = document.body;
+		user(setTheme);
+		
+		function user(info){
+			if(info=="on"){
+			element.classList.toggle("dark-mode");
+			}
+		}
+		function darktheme() {	
+			element.classList.toggle("dark-mode");
+			var val = localStorage.getItem('theme')	;
+			if(val=="on"){
+			localStorage.setItem('theme',"off");
+			}
+			else{
+			localStorage.setItem('theme',"on");
+			}
+			console.log('theme:', val);
+	}
+	</script>
 	</body>
 </html>

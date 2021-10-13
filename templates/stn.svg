@@ -2,14 +2,14 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="1007" width="1410">
 <title>Singapore MRT/LRT system map</title>
- <rect id="bg" height="1007" width="1410" y="0" x="0" fill="#ffffff"/>
+ 
  <g id="title">
   <switch><text id="tttitle-ms" x="7.1" y="19" font-size="20" font-weight="bold" fill="#001e0d" font-family="Arial" systemLanguage="ms"><tspan id="trsvg1-ms">PETA SINGAPURA MRT / LRT</tspan></text></switch>
  </g>
  <g id="legend">
-    <rect id="lgbox" height="210" width="250" x="100" y="690" fill="#f2f2f2"></rect>
+    <rect id="lgbox" height="180" width="224" x="113" y="710" fill="##001e0d"></rect>
     <g id="title">
-     <text id="tttitle" x="115" y="727" font-size="20" font-weight="bold" fill="#001e0d" font-family="Arial">Route Information</text>
+     <text id="tttitle" x="138" y="735" font-size="20" font-weight="bold" fill="#ffffff" font-family="Arial"> Route Information</text>
     </g>
     <g id="lgcolorbox">
      <rect height="20" width="220" x="115" y="747.5" fill="#009645"></rect>
@@ -18,7 +18,7 @@
      <rect height="20" width="220" x="115" y="807.5" fill="#fa9e0d"></rect>
      <rect height="20" width="220" x="115" y="827.5" fill="#005ec4"></rect>
      <rect height="20" width="220" x="115" y="847.5" fill="#784008"></rect>
-     <rect height="20" width="220" x="115" y="867.5" fill="#d2d4d2"></rect>
+     <rect height="20" width="220" x="115" y="867.5" fill="#999999"></rect>
     </g>
     <g id="lglabels" font-family="Arial" line-height="100%" fill="#ffffff">
      <text id="lglew" x="120" y="760.5" font-size="11" font-weight="bold">East West Line (EWL)</text>
@@ -324,7 +324,7 @@
   </a>
  </g>
  <g id="stns_labels" font-family="Arial">
-  <g id="lbewl" font-size="12" fill="#000000">
+  <g id="lbewl" font-size="12" fill="#aaaaaa">
    <switch><text id="lbcg2a" x="1310" y="687"><tspan id="trsvg61">Changi</tspan></text></switch>
    <switch><text id="lbcg2b" x="1312" y="699"><tspan id="trsvg62">Airport</tspan></text></switch>
    <switch><text id="lbew1" x="1289" y="522"><tspan id="trsvg63">Pasir Ris</tspan></text></switch>
@@ -359,7 +359,7 @@
    <switch><text id="lbew32b" x="39" y="608"><tspan id="trsvg92">Road</tspan></text></switch>
    <switch><text id="lbew33" x="15" y="630"><tspan id="trsvg93">Tuas Link</tspan></text></switch>
   </g>
-  <g id="lbnsl" font-size="12" fill="#000000">
+  <g id="lbnsl" font-size="12" fill="#aaaaaa">
    <switch><text id="lbns2a" x="292" y="411"><tspan id="trsvg94">Bukit</tspan></text></switch>
    <switch><text id="lbns2b" x="292" y="423"><tspan id="trsvg95">Batok</tspan></text></switch>
    <switch><text id="lbns3a" x="292" y="350"><tspan id="trsvg96">Bukit</tspan></text></switch>
@@ -387,7 +387,7 @@
    <switch><text id="lbns28a" x="745" y="972"><tspan id="trsvg119">Marina</tspan></text></switch>
    <switch><text id="lbns28b" x="724" y="984"><tspan id="trsvg120">South Pier</tspan></text></switch>
   </g>
-  <g id="lbnel" font-size="12" fill="#000000">
+  <g id="lbnel" font-size="12" fill="#aaaaaa">
    <switch><text id="lbne5a" x="730" y="729"><tspan id="trsvg121">Clarke</tspan></text></switch>
    <switch><text id="lbne5b" x="730" y="741"><tspan id="trsvg122">Quay</tspan></text></switch>
    <switch><text id="lbne8a" x="810" y="591"><tspan id="trsvg123">Farrer</tspan></text></switch>
@@ -401,7 +401,7 @@
    <switch><text id="lbne18" x="1264" y="132" fill="#aaaaaa"><tspan id="trsvg131">Punggol Coast</tspan></text></switch>
 
   </g>
-  <g id="lbccl" font-size="12" fill="#000000">
+  <g id="lbccl" font-size="12" fill="#aaaaaa">
    <switch><text id="lbcc2a" x="830" y="727"><tspan id="trsvg132">Bras</tspan></text></switch>
    <switch><text id="lbcc2b" x="830" y="739"><tspan id="trsvg133">Basah</tspan></text></switch>
    <switch><text id="lbcc3" x="872" y="779"><tspan id="trsvg134">Esplanade</tspan></text></switch>
@@ -440,7 +440,7 @@
    <switch><text id="lbcc32b" x="713" y="946"><tspan id="trsvg166">Edward</tspan></text></switch>
    <switch><text id="lbcc32c" x="720" y="958"><tspan id="trsvg167">Road</tspan></text></switch>
   </g>
-  <g id="lbdtl" font-size="12" fill="#000000">
+  <g id="lbdtl" font-size="12" fill="#aaaaaa">
    <switch><text id="lbdt2" x="430.5" y="269"><tspan id="trsvg168">Cashew</tspan></text></switch>
    <switch><text id="lbdt3" x="433" y="301"><tspan id="trsvg169">Hillview</tspan></text></switch>
    <switch><text id="lbdt5a" x="436" y="358"><tspan id="trsvg170">Beauty</tspan></text></switch>
@@ -485,7 +485,7 @@
    <switch><text id="lbdt37b" x="1271" y="794"><tspan id="trsvg207">Bedok</tspan></text></switch>
    <switch><text id="lbdt4" x="442" y="333"><tspan id="trsvg208">Hume</tspan></text></switch>
   </g>
-  <g id="lbtel" font-size="12" fill="#000000">
+  <g id="lbtel" font-size="12" fill="#aaaaaa">
    <switch><text id="lbte1a" x="450" y="29"><tspan id="trsvg209">Woodlands North</tspan></text></switch>
    <switch><text id="lbte3a" x="596" y="119"><tspan id="trsvg210">Woodlands</tspan></text></switch>
    <switch><text id="lbte3b" x="596" y="131"><tspan id="trsvg211">South</tspan></text></switch>
@@ -531,7 +531,7 @@
   </g>
   
 
-  <g id="lbint" font-size="12" fill="#000000" font-weight="bold">
+  <g id="lbint" font-size="12" fill="#aaaaaa" font-weight="bold">
    <switch><text id="lbcc1a" x="708" y="686"><tspan id="trsvg292">Dhoby</tspan></text></switch> <!-- Circle Line ints first for ease of reference. -->
    <switch><text id="lbcc1b" x="709" y="698"><tspan id="trsvg293">Ghaut</tspan></text></switch>
    <switch><text id="lbce2a" x="789" y="895"><tspan id="trsvg294">Marina</tspan></text></switch>
@@ -574,7 +574,7 @@
    <switch><text id="lbcc17" x="595" y="399"><tspan id="trsvg145">Caldecott</tspan></text></switch>
 
   </g>
-  <g id="lbbpl" font-size="10" fill="#000000">
+  <g id="lbbpl" font-size="10" fill="#aaaaaa">
    <switch><text id="lbbp2a" x="307" y="211"><tspan id="trsvg330">South</tspan></text></switch>
    <switch><text id="lbbp2b" x="309" y="221"><tspan id="trsvg331">View</tspan></text></switch>
    <switch><text id="lbbp3a" x="345" y="239"><tspan id="trsvg332">Keat</tspan></text></switch>
@@ -590,7 +590,7 @@
    <switch><text id="lbbp12" x="525" y="186"><tspan id="trsvg342">Jelapang</tspan></text></switch>
    <switch><text id="lbbp13" x="525" y="215"><tspan id="trsvg343">Senja</tspan></text></switch>
   </g>
-  <g id="lbskl" font-size="10" fill="#000000">
+  <g id="lbskl" font-size="10" fill="#aaaaaa">
    <switch><text id="lbse1" x="1096" y="315"><tspan id="trsvg344">Compassvale</tspan></text></switch>
    <switch><text id="lbse2" x="1155" y="335"><tspan id="trsvg345">Rumbia</tspan></text></switch>
    <switch><text id="lbse3" x="1157" y="379"><tspan id="trsvg346">Bakau</tspan></text></switch>
@@ -606,7 +606,7 @@
    <switch><text id="lbsw7" x="973" y="293"><tspan id="trsvg356">Tongkang</tspan></text></switch>
    <switch><text id="lbsw8" x="1025" y="286"><tspan id="trsvg357">Renjong</tspan></text></switch>
   </g>
-  <g id="lbpgl" font-size="10" fill="#000000">
+  <g id="lbpgl" font-size="10" fill="#aaaaaa">
    <switch><text id="lbpe1" x="1164" y="250"><tspan id="trsvg358">Cove</tspan></text></switch>
    <switch><text id="lbpe2" x="1154" y="275"><tspan id="trsvg359">Meridian</tspan></text></switch>
    <switch><text id="lbpe3" x="1160" y="293"><tspan id="trsvg360">Coral Edge</tspan></text></switch>
