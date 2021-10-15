@@ -58,6 +58,7 @@
 			color: #006898;
 		}
 		.button{
+			position: relative;
 			background-color: #006898;
 			border: none;
 			color: white;
@@ -93,10 +94,10 @@
 			border: 2px solid #006898;
 			appearance: none;
 			background: #e8eaf6;
-            background-image: url("arrow.png");
-            background-repeat: no-repeat;
+			background-image: url("arrow.png");
+			background-repeat: no-repeat;
 			background-position: 95% 55%;
-			background-size: 21px 14px;
+			background-size: 30px 30px;
 		}
 		
 		.content{
@@ -121,6 +122,64 @@
 		.dark-mode {
 			background-color: black;
 			color: white;
+		}
+		.switch {
+			position: relative;
+			display: inline-block;
+			width: 60px;
+			height: 34px;
+		}
+
+		.switch input {
+			opacity: 0;
+			width: 0;
+			height: 0;
+		}
+
+		.slider {
+			position: absolute;
+			cursor: pointer;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-color: #ccc;
+			-webkit-transition: .4s;
+			transition: .4s;
+		}
+
+		.slider:before {
+			position: absolute;
+			content: "";
+			height: 26px;
+			width: 26px;
+			left: 4px;
+			bottom: 4px;
+			background-color: white;
+			-webkit-transition: .4s;
+			transition: .4s;
+		}
+
+		input:checked+.slider {
+			background-color: #242424;
+		}
+
+		input:focus+.slider {
+			box-shadow: 0 0 1px #262729;
+		}
+
+		input:checked+.slider:before {
+			-webkit-transform: translateX(26px);
+			-ms-transform: translateX(26px);
+			transform: translateX(26px);
+		}
+
+		.slider.round {
+			border-radius: 34px;
+		}
+
+		.slider.round:before {
+			border-radius: 50%;
 		}
 	@media (max-width: 500px){
 		.heading{
@@ -189,7 +248,8 @@
 			text-decoration: none;
 			display: inline-block;
 			font-size: 16px;
-			margin: 4px 4px;
+			margin-top: 5%;
+			margin-left: 5%;
 			cursor: pointer;
 			border-radius: 2px;
 		}
@@ -215,12 +275,12 @@
 			border-radius: 8px;
 			border: 2px solid #006898;
 			appearance: none;
-			background: #e8eaf6 url(./arrow.png) no-repeat;
-			background-position: 95% 55%;
-			background-size: 21px 14px;
+			background: #e8eaf6 url("arrow.png") no-repeat;
+			background-position: 93% 52%;
+			background-size: 25px 25px;
 		}
 		.content{
-			margin: 30px 0;
+			margin: 25px 0;
 		}
 		.content .data{
 			padding: 25px;
@@ -238,9 +298,63 @@
 			margin-bottom: 0;
 			padding-bottom: 0;
 		}
-		.dark-mode {
-			background-color: black;
-			color: white;
+		.switch {
+			margin-top: 5%;
+			margin-right: 5%;
+			float: right;
+			position: relative;
+			width: 60px;
+			height: 34px;
+		}
+		.switch input {
+			opacity: 0;
+			width: 0;
+			height: 0;
+		}
+		.slider {
+			position: absolute;
+			cursor: pointer;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-color: #ccc;
+			-webkit-transition: .4s;
+			transition: .4s;
+		}
+
+		.slider:before {
+			position: absolute;
+			content: "";
+			height: 26px;
+			width: 26px;
+			left: 4px;
+			bottom: 4px;
+			background-color: white;
+			-webkit-transition: .4s;
+			transition: .4s;
+		}
+
+		input:checked+.slider {
+			background-color: #242424;
+		}
+
+		input:focus+.slider {
+			box-shadow: 0 0 1px #262729;
+		}
+
+		input:checked+.slider:before {
+			-webkit-transform: translateX(26px);
+			-ms-transform: translateX(26px);
+			transform: translateX(26px);
+		}
+
+		.slider.round {
+			border-radius: 34px;
+		}
+
+		.slider.round:before {
+			border-radius: 50%;
 		}
 	}
 	</style>
@@ -256,8 +370,23 @@
 				element.classList.toggle("dark-mode");
 				}
 			}
+		function darktheme() {
+			element.classList.toggle("dark-mode");
+			var val = localStorage.getItem('theme');
+			if (val == "on") {
+				localStorage.setItem('theme', "off");
+			}
+			else {
+				localStorage.setItem('theme', "on");
+			}
+			console.log('theme:', val);
+		}
 		</script>
 		<button class="button" onclick="history.back()">&LessLess;</button>
+		<label class="switch">
+			<input id="def" onclick="darktheme()" type="checkbox" >
+			<span class="slider round"></span>
+		</label>
 		<div class="wrapper">
 			<div class="menu">
 				<select id="station">
@@ -2906,10 +3035,6 @@
 						</tbody>
 					
 					</table>
-		
-					
-		
-				</table>
 				
 				<div class = "heading">
 					<p>Last train service terminating at NS16 Ang Mo Kio</p>

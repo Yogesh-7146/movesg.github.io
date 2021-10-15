@@ -25,7 +25,7 @@
 			padding: 5px 5px;
 			font-family: 'Poppins', sans-serif;
 			text-align: center;
-			font-size: 10px;
+			font-size: 12px;
 			margin: 5px 5px;
 			-webkit-touch-callout: none;
 			-webkit-user-select: none;
@@ -34,7 +34,22 @@
 			-ms-user-select: none;
 			user-select: none;
 		}
-
+		.disclaimer{  
+			border: none;
+			background-color: rgb(190, 0, 0);
+			color: white;
+			padding: 5px 5px;
+			font-family: 'Poppins', sans-serif;
+			text-align: center;
+			font-size: 10px;
+			margin: 7px 5px;
+			-webkit-touch-callout: none;
+			-webkit-user-select: none;
+			-khtml-user-select: none; 
+			-moz-user-select: none;
+			-ms-user-select: none; 
+			user-select: none;
+		}
 		.button {
 			background-color: #006898;
 			border: none;
@@ -105,7 +120,6 @@
 			transform: translateX(26px);
 		}
 
-		/* Rounded sliders */
 		.slider.round {
 			border-radius: 34px;
 		}
@@ -113,10 +127,67 @@
 		.slider.round:before {
 			border-radius: 50%;
 		}
+	
+		@media(max-width: 500px){
+			body {
+				padding: 25px;
+				background-color: white;
+				color: black;
+				font-size: 25px;
+			}
 
-		
+			.instructions {
+				background-color: #006898;
+				border: none;
+				color: white;
+				padding: 5px 5px;
+				font-family: 'Poppins', sans-serif;
+				text-align: center;
+				font-size: 12px;
+				margin: 5px 5px;
+				-webkit-touch-callout: none;
+				-webkit-user-select: none;
+				-khtml-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+			}
+			.disclaimer{  
+				border: none;
+				background-color: rgb(190, 0, 0);
+				color: white;
+				padding: 5px 5px;
+				font-family: 'Poppins', sans-serif;
+				text-align: center;
+				font-size: 10px;
+				margin: 7px 5px;
+				-webkit-touch-callout: none;
+				-webkit-user-select: none;
+				-khtml-user-select: none; 
+				-moz-user-select: none;
+				-ms-user-select: none; 
+				user-select: none;
+			}
+			.button {
+				background-color: #006898;
+				border: none;
+				color: white;
+				padding: 7px 13px;
+				text-align: center;
+				text-decoration: none;
+				display: inline-block;
+				font-size: 16px;
+				margin: 4px 4px;
+				cursor: pointer;
+				border-radius: 2px;
+
+			}
+		}	
 	</style>
 	<button class="button" onclick="history.back()">&LessLess;</button>
+	<label class="switch"><input id="def" onclick="darktheme()" type="checkbox" >
+		<span class="slider round"></span>
+	</label>
 	<div class="instructions">
 		<p><strong>Tap</strong> to select stations<br>
 			<strong>Double Tap</strong> to reset selection
@@ -183,10 +254,26 @@
 				def.checked=false;
 			}
 		}
-		
+		function darktheme() {
+			element.classList.toggle("dark-mode");
+			var val = localStorage.getItem('theme');
+			if (val == "on") {
+				localStorage.setItem('theme', "off");
+			}
+			else {
+				localStorage.setItem('theme', "on");
+			}
+			console.log('theme:', val);
+		}
 	
 		</script>
-
+		<div class="disclaimer">
+			<h2><strong>Mon - Fri</strong></h2>
+			<p>From <strong>9AM to 11AM</strong> and <strong>5pm to 7pm</strong><br>All Metro Trains will be crowded!<br></p>
+		</div>
+		<div class="disclaimer">
+			<h2><strong>Sat - Sun</strong></h2>
+			<p>From <strong>8AM to 12AM</strong> and <strong>4pm to 7pm</strong><br>All Metro Trains will be crowded!<br></p>
 
 </body>
 
