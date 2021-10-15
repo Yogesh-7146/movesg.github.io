@@ -6,17 +6,16 @@
 		* {
 			font-family: sans-serif;
 		}
-
 		.heading{
 			padding: 0.1px;
 			margin: 15px 0;
-			background-color: #009879;
+			background-color: #006898;
 			color: #ffffff;
 			font-size: 20px;
 			font-weight: bold;
 			text-align: center;
 			border-radius: 5px 5px 5px 5px;
-			box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+			box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
 		}
 
 		.content-table {
@@ -27,11 +26,11 @@
 			min-width: 400px;
 			border-radius: 5px 5px 0 0;
 			overflow: hidden;
-			box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+			box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.15);
 		}
 		
 		.content-table thead tr {
-			background-color: #009879;
+			background-color: #006898;
 			color: #ffffff;
 			text-align: left;
 			font-weight: bold;
@@ -51,15 +50,15 @@
 		}
 		
 		.content-table tbody tr:last-of-type {
-			border-bottom: 2px solid #009879;
+			border-bottom: 2px solid #006898;
 		}
 		
 		.content-table tbody tr.active-row {
 			font-weight: bold;
-			color: #009879;
+			color: #006898;
 		}
 		.button{
-			background-color: #009879;
+			background-color: #006898;
 			border: none;
 			color: white;
 			padding: 7px 13px;
@@ -91,8 +90,7 @@
 			font-family: "Poppins", sans-serif;
 			border: none;
 			border-radius: 8px;
-			border: 2px solid #009879;
-			box-shadow: 0 15px 15px #d1d1d1;
+			border: 2px solid #006898;
 			appearance: none;
 			background: #e8eaf6 url(./arrow.png) no-repeat;
 			background-position: 95% 55%;
@@ -105,27 +103,158 @@
 		.content .data{
 			padding: 25px;
 			background-color: #fff;
-			border: 2px solid #009879;
+			border: 2px solid #006898;
 			border-radius: 8px;
 		}
 		.content p{
 			margin-bottom: 15px;
 			padding-bottom: 15px;
-			border-bottom: 1px oslid gainsboro;
+			border-bottom: 1px solid gainsboro;
 		}
 		.content p:last-child{
 			border-bottom: none;
 			margin-bottom: 0;
 			padding-bottom: 0;
-			
 		}
 		.dark-mode {
 			background-color: black;
 			color: white;
 		}
-
+	@media (max-width: 500px){
+		.heading{
+			padding: 4px;
+			margin: 15px 0;
+			margin-top: 25px;
+			background-color: #006898;
+			color: #ffffff;
+			font-size: 12px;
+			font-weight: bold;
+			text-align: center;
+			border-radius: 5px 5px 5px 5px;
+			min-width: 300px;
+		}
+		
+		.heading p{
+			padding: 4px;
+			margin: 2px 2px;
+			background-color: #006898;
+			color: #ffffff;
+			font-size: 12px;
+			font-weight: bold;
+			text-align: center;
+			border-radius: 5px 5px 5px 5px;
+		}
+		.content-table {
+			padding-right: 10px;
+			padding-left: 10px;
+			border-collapse: collapse;
+			margin-left: auto;
+			margin-right: auto;
+			font-size: 0.9em;
+			min-width: 300px;
+			border-radius: 5px 5px 0 0;
+			overflow: hidden;
+		}
+		.content-table thead tr {
+			background-color: #006898;
+			color: #ffffff;
+			text-align: left;
+			font-weight: bold;
+		}
+		.content-table th,
+		.content-table td {
+			padding: 7px 12px;
+		}
+		.content-table tbody tr {
+			border-bottom: 1px solid #dddddd;
+		}
+		.content-table tbody tr:nth-of-type(even) {
+			background-color: #f3f3f3;
+		}
+		.content-table tbody tr:last-of-type {
+			border-bottom: 2px solid #006898;
+		}
+		.content-table tbody tr.active-row {
+			font-weight: bold;
+			color: #006898;
+		}
+		.button{
+			background-color: #006898;
+			border: none;
+			color: white;
+			padding: 7px 13px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin: 4px 4px;
+			cursor: pointer;
+			border-radius: 2px;
+		}
+		.wrapper{
+			position: relative;
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+			padding-top: 15px;
+			padding-bottom: 2px;
+			max-width: 90%;
+		}
+		.menu, .content {
+			max-width: 80%;
+		}
+		select{
+			width: 100%;
+			padding: 15px;
+			font-size: 16px;
+			font-weight: 700;
+			font-family: "Poppins", sans-serif;
+			border: none;
+			border-radius: 8px;
+			border: 2px solid #006898;
+			appearance: none;
+			background: #e8eaf6 url(./arrow.png) no-repeat;
+			background-position: 95% 55%;
+			background-size: 21px 14px;
+		}
+		.content{
+			margin: 30px 0;
+		}
+		.content .data{
+			padding: 25px;
+			background-color: #fff;
+			border: 2px solid #006898;
+			border-radius: 8px;
+		}
+		.content p{
+			margin-bottom: 15px;
+			padding-bottom: 15px;
+			border-bottom: 1px solid gainsboro;
+		}
+		.content p:last-child{
+			border-bottom: none;
+			margin-bottom: 0;
+			padding-bottom: 0;
+		}
+		.dark-mode {
+			background-color: black;
+			color: white;
+		}
+	}
 	</style>
 	<body>
+		<script>
+			var setTheme = localStorage.getItem('theme');
+			console.log('theme:', setTheme);
+			var element = document.body;
+			user(setTheme);
+			
+			function user(info){
+				if(info=="on"){
+				element.classList.toggle("dark-mode");
+				}
+			}
+		</script>
 		<button class="button" onclick="history.back()">&LessLess;</button>
 		<div class="wrapper">
 			<div class="menu">
@@ -233,23 +362,13 @@
 					<option value="YewTee">Yew Tee</option>>
 					<option value="YioChuKang">Yio Chu Kang</option>>
 					<option value="Yishun">Yishun</option>>
-
-
-
-
-
-					
-
-
 				</select>
 			</div>
 		</div>
 			
 		<div class="content-table">
 		    <div id="Admiralty" class="data">
-			<div class = "heading"><h1>Admiralty</h1></div>
-			<div class = "heading">
-					<p>First/Last train service terminating at NS1 EW24 Jurong East</p>
+			<div class = "heading"><p>First/Last train service terminating at NS1 EW24 Jurong East</p>
 			</div>
 		     <table class="content-table">
 			<thead>
@@ -445,9 +564,7 @@
 		    </table>
 		    </div>
 			<div id="Aljunied" class="data">
-				<div class = "heading">
-					<h1>Aljunied</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>First/Last train service terminating at EW33 Tuas Link</p>
 				</div>
@@ -569,9 +686,7 @@
 				</table>
 			</div>	
 			<div id="AngMoKio" class="data">
-				<div class = "heading">
-					<h1>Ang Mo Kio</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>First/Last train service terminating at NS1 EW24 Jurong East</p>
 				</div>
@@ -776,9 +891,7 @@
 				</table>
 			</div>
 			<div id="Bangkit" class="data">
-				<div class = "heading">
-					<h1>Bangkit</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>Last train service terminating at BP6 P1 (Platform 1)</p>
 				</div>
@@ -865,9 +978,7 @@
 				</table>
 			</div>
 			<div id="Bartley" class="data">
-				<div class = "heading">
-					<h1>Bartley</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>towards NE1 CC29 HarbourFront</p>
 				</div>
@@ -1110,9 +1221,7 @@
 				</table>
 			</div>
 			<div id="Bayfront" class="data">
-				<div class = "heading">
-					<h1>Bayfront</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>towards CC6 Stadium</p>
 				</div>
@@ -1197,9 +1306,7 @@
 				</table>
 			</div>
 			<div id="Bedok" class="data">
-				<div class = "heading">
-					<h1>Bedok</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>First/Last train service terminating at EW33 Tuas Link</p>
 				</div>
@@ -1325,9 +1432,7 @@
 				</table>
 			</div>
 			<div id="Bishan" class="data">
-				<div class = "heading">
-					<h1>Bishan</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>First/Last train service terminating at NS1 EW24 Jurong East</p>
 				</div>
@@ -1535,9 +1640,7 @@
 				</table>
 			</div>
 			<div id="BoonLay" class="data">
-				<div class = "heading">
-					<h1>Boon Lay</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>First/Last train service terminating at EW33 Tuas Link</p>
 				</div>
@@ -1663,9 +1766,7 @@
 				</table>
 			</div>
 			<div id="BotanicGardens" class="data">
-				<div class = "heading">
-					<h1>Botanic Gardens</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>First/Last train service terminating at NE1 CC29 HarbourFront</p>
 				</div>
@@ -1872,9 +1973,7 @@
 				</table>
 			</div>
 			<div id="Braddell" class="data">
-				<div class = "heading">
-					<h1>Braddell</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>First/Last train service terminating at NS1 EW24 Jurong East</p>
 				</div>
@@ -2042,9 +2141,7 @@
 				</table>
 			</div>
 			<div id="BrasBasah" class="data">
-				<div class = "heading">
-					<h1>Bras Basah</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>First/Last train service terminating at NE1 CC29 HarbourFront</p>
 				</div>
@@ -2291,9 +2388,7 @@
 				</table>
 			</div>
 			<div id="BrightHill" class="data">
-				<div class = "heading">
-					<h1>Bright Hill</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>First/Last train service terminating at TE1 Woodlands North</p>
 				</div>
@@ -2434,9 +2529,7 @@
 				</table>
 			</div>
 			<div id="Bugis" class="data">
-				<div class = "heading">
-					<h1>Bugis</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>First/Last train service terminating at EW33 Tuas Link</p>
 				</div>
@@ -2562,9 +2655,7 @@
 				</table>
 			</div>
 			<div id="BukitBatok" class="data">
-				<div class = "heading">
-					<h1>Bukit Batok</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>First/Last train service terminating at NS1 EW24 Jurong East</p>
 				</div>
@@ -2731,9 +2822,7 @@
 				</table>
 			</div>
 			<div id="BukitGombak" class="data">
-				<div class = "heading">
-					<h1>Bukit Gombak</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>First/Last train service terminating at NS1 EW24 Jurong East</p>
 				</div>
@@ -3000,9 +3089,7 @@
 						</table>	
 			</div>
 			<div id="BuonaVista" class="data">
-				<div class = "heading">
-					<h1>Buona Vista</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>First/Last train service terminating at EW33 Tuas Link</p>
 				</div>
@@ -3370,9 +3457,7 @@
 				</table>
 			</div>
 			<div id="Caldecott" class="data">
-				<div class = "heading">
-					<h1>Caldecott</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>towards NE1 CC29 HarbourFront</p>
 				</div>
@@ -3700,9 +3785,7 @@
 				</table>
 			</div>
 		    <div id="Canberra" class="data">
-				<div class = "heading">
-					<h1>Canberra</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>First/Last train service terminating at NS1 EW24 Jurong East</p>
 				</div>
@@ -3910,9 +3993,7 @@
 				</table>
 			</div>
 			<div id="ChangiAirport" class="data">
-				<div class = "heading">
-					<h1>Changi Airport</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>First/Last train service terminating at EW33 Tuas Link</p>
 				</div>
@@ -3997,9 +4078,7 @@
 				</table>
 			</div>
 			<div id="ChineseGarden" class="data">
-				<div class = "heading">
-					<h1>Chinese Garden</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>First/Last train service terminating at EW33 Tuas Link</p>
 				</div>
@@ -4124,9 +4203,7 @@
 				</table>
 			</div>
 			<div id="ChoaChuKang" class="data">
-				<div class = "heading">
-					<h1>Choa Chu Kang</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>First/Last train service terminating at NS1 EW24 Jurong East</p>
 				</div>
@@ -4374,9 +4451,8 @@
 				</table>
 			</div>
 			<div id="CityHall" class="data">
-				<div class = "heading">
-					<h1>City Hall</h1>
-				</div>
+				<button onclick="history.back()">⏪Back</button>
+				
 				<div class = "heading">
 					<p>
 						First/Last train service terminating at NS1 EW24 Jurong East</p>
@@ -4624,9 +4700,7 @@
 				</table>
 			</div>
 			<div id="Clementi" class="data">
-				<div class = "heading">
-					<h1>Clementi</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>First/Last train service terminating at EW33 Tuas Link</p>
 				</div>
@@ -4753,9 +4827,7 @@
 				</table>
 			</div>
 			<div id="Commonwealth" class="data">
-				<div class = "heading">
-					<h1>Commonwealth</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>First/Last train service terminating at EW33 Tuas Link</p>
 				</div>
@@ -4881,9 +4953,7 @@
 				</table>
 			</div>
 			<div id="Dakota" class="data">
-				<div class = "heading">
-					<h1>Dakota</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>towards NE1 CC29 HarbourFront</p>
 				</div>
@@ -5164,9 +5234,7 @@
 					</table>
 			</div>
 			<div id="DhobyGhaut" class="data">
-				<div class = "heading">
-					<h1>Dhoby Ghaut</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>First/Last train service terminating at NS1 EW24 Jurong East</p>
 				</div>
@@ -5498,9 +5566,7 @@
 				</table>
 			</div>
 			<div id="Dover" class="data">
-				<div class = "heading">
-					<h1>Dover</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>First/Last train service terminating at EW33 Tuas Link</p>
 				</div>
@@ -5623,9 +5689,7 @@
 					  </table>
 			</div>
 			<div id="Esplanade" class="data">
-				<div class = "heading">
-					<h1>Esplanade</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>towards NE1 CC29 HarbourFront</p>
 				</div>
@@ -5867,9 +5931,7 @@
 				</table>
 			</div>
 			<div id="Eunos" class="data">
-				<div class = "heading">
-					<h1>Eunos</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>First/Last train service terminating at EW33 Tuas Link</p>
 				</div>
@@ -5993,9 +6055,7 @@
 				</table>
 			</div>
 			<div id="Expo" class="data">
-				<div class = "heading">
-					<h1>Expo</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>First/Last train service terminating at EW33 Tuas Link</p>
 				</div>
@@ -6119,9 +6179,7 @@
 					</table>
 			</div>
 			<div id="Fajar" class="data">
-				<div class = "heading">
-					<h1>Fajar</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>Last train service terminating at BP6 P1 (Platform 1)</p>
 				</div>
@@ -6204,9 +6262,7 @@
 				</table>
 			</div>
 			<div id="FarrerRoad" class="data">
-				<div class = "heading">
-					<h1>Farrer Road</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>towards NE1 CC29 HarbourFront</p>
 				</div>
@@ -6449,9 +6505,7 @@
 				</table>
 			</div>
 			<div id="GulCircle" class="data">
-				<div class = "heading">
-					<h1>Gul Circle</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>First/Last train service terminating at EW33 Tuas Link</p>
 				</div>
@@ -6574,9 +6628,7 @@
 				</table>
 			</div>
 			<div id="HarbourFront" class="data">
-				<div class = "heading">
-					<h1>HarbourFront</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>First/Last train service terminating at NS24 NE6 CC1 Dhoby Ghaut</p>
 				</div>
@@ -6699,9 +6751,7 @@
 					 </table>
 			</div>
 			<div id="HawParVilla" class="data">
-				<div class = "heading">
-					<h1>Haw Par Villa</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>towards NE1 CC29 HarbourFront</p>
 				</div>
@@ -6904,9 +6954,7 @@
 				</table>
 			</div>
 			<div id="HollandVillage" class="data">
-				<div class = "heading">
-					<h1>Holland Village</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>towards NE1 CC29 HarbourFront</p>
 				</div>
@@ -7148,9 +7196,7 @@
 				</table>
 			</div>
 			<div id="Jelapang" class="data">
-				<div class = "heading">
-					<h1>Jelapang</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>Last train service terminating at BP6 P1 (Platform 1)</p>
 				</div>
@@ -7234,9 +7280,7 @@
 				</table>
 			</div>
 			<div id="JooKoon" class="data">
-				<div class = "heading">
-					<h1>Joo Koon</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>First/Last train service terminating at EW33 Tuas Link</p>
 				</div>
@@ -7359,9 +7403,7 @@
 				</table>
 			</div>
 			<div id="JurongEast" class="data">
-				<div class = "heading">
-					<h1>Jurong East</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>Last train service terminating at NS19 Toa Payoh</p>
 				</div>
@@ -7603,9 +7645,7 @@
 				</table>
 			</div>
 			<div id="Kallang" class="data">
-				<div class = "heading">
-					<h1>Kallang</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>First/Last train service terminating at EW33 Tuas Link</p>
 				</div>
@@ -7729,9 +7769,7 @@
 					 </table>
 			</div>
 			<div id="KeatHong" class="data">
-				<div class = "heading">
-					<h1>KeatHong</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>Last train service terminating at BP6 P1 (Platform 1)</p>
 				</div>
@@ -7814,9 +7852,7 @@
 				</table>
 			</div>
 			<div id="Kembangan" class="data">
-				<div class = "heading">
-					<h1>Kembangan</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>First/Last train service terminating at EW33 Tuas Link</p>
 				</div>
@@ -7939,9 +7975,7 @@
 					</table>
 			</div>
 			<div id="KentRidge" class="data">
-				<div class = "heading">
-					<h1>Kent Ridge</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>towards NE1 CC29 HarbourFront</p>
 				</div>
@@ -8144,9 +8178,7 @@
 				</table>
 			</div>
 			<div id="Khatib" class="data">
-				<div class = "heading">
-					<h1>Khatib</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>First/Last train service terminating at NS1 EW24 Jurong East</p>
 				</div>
@@ -8390,9 +8422,7 @@
 				</table>
 			</div>
 			<div id="Kranji" class="data">
-				<div class = "heading">
-					<h1>Kranji</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>First/Last train service terminating at NS1 EW24 Jurong East</p>
 				</div>
@@ -8555,9 +8585,7 @@
 				</table>
 			</div>
 			<div id="LabradorPark" class="data">
-				<div class = "heading">
-					<h1>Labrador Park</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>First/Last train service terminating at NE1 CC29 HarbourFront</p>
 				</div>
@@ -8720,9 +8748,7 @@
 				</table>
 			</div>
 			<div id="Lakeside" class="data">
-				<div class = "heading">
-					<h1>Lakeside</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>First/Last train service terminating at EW33 Tuas Link</p>
 				</div>
@@ -8845,9 +8871,7 @@
 						</table>
 			</div>
 			<div id="Lavender" class="data">
-				<div class = "heading">
-					<h1>Lavender</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>First/Last train service terminating at EW33 Tuas Link</p>
 				</div>
@@ -8971,9 +8995,7 @@
 					  </table>
 			</div>
 			<div id="Lentor" class="data">
-				<div class = "heading">
-					<h1>Lentor</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>First/Last train service terminating at TE1 Woodlands North</p>
 				</div>
@@ -9096,9 +9118,7 @@
 				</table>
 			</div>
 			<div id="LorongChuan" class="data">
-				<div class = "heading">
-					<h1>Lorong Chuan</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>towards NE1 CC29 HarbourFront</p>
 				</div>
@@ -9380,9 +9400,7 @@
 				</table>
 			</div>
 			<div id="MacPherson" class="data">
-				<div class = "heading">
-					<h1>MacPherson</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>towards NE1 CC29 HarbourFront</p>
 				</div>
@@ -9663,9 +9681,7 @@
 				</table>
 			</div>
 			<div id="MarinaBay" class="data">
-				<div class = "heading">
-					<h1>Marina Bay</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>First/Last train service terminating at NS1 EW24 Jurong East</p>
 				</div>
@@ -9794,9 +9810,9 @@
 				<table class="content-table">
 					<thead>
 						<tr>
-						 <th>Day</th>
-						 <th>First Train</th>
-						 <th>Last Train</th>
+						<th>Day</th>
+						<th>First Train</th>
+						<th>Last Train</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -9830,9 +9846,7 @@
 				</table>
 			</div>
 			<div id="MarinaSouthPier" class="data">
-				<div class = "heading">
-					<h1>Marina South Pier</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>First/Last train service terminating at NS1 EW24 Jurong East</p>
 				</div>
@@ -9915,9 +9929,7 @@
 				</table>
 			</div>
 			<div id="Marsiling" class="data">
-				<div class = "heading">
-					<h1>Marsiling</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>First/Last train service terminating at NS1 EW24 Jurong East</p>
 				</div>
@@ -10121,9 +10133,7 @@
 				</table>
 			</div>
 			<div id="Marymount" class="data">
-				<div class = "heading">
-					<h1>Marymount</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>towards NE1 CC29 HarbourFront</p>
 				</div>
@@ -10404,9 +10414,7 @@
 				</table>
 			</div>
 			<div id="Mayflower" class="data">
-				<div class = "heading">
-					<h1>Mayflower</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>First/Last train service terminating at TE1 Woodlands North</p>
 				</div>
@@ -10529,9 +10537,7 @@
 						 </table>
 			</div>
 			<div id="Mountbatten" class="data">
-				<div class = "heading">
-					<h1>Mountbatten</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>towards NE1 CC29 HarbourFront</p>
 				</div>
@@ -10773,9 +10779,7 @@
 				</table>
 			</div>
 			<div id="Newton" class="data">
-				<div class = "heading">
-					<h1>Newton</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>First/Last train service terminating at NS1 EW24 Jurong East</p>
 				</div>
@@ -10898,9 +10902,7 @@
 							  </table>
 			</div>
 			<div id="NicollHighway" class="data">
-				<div class = "heading">
-					<h1>Nicoll Highway</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>towards NE1 CC29 HarbourFront</p>
 				</div>
@@ -11223,9 +11225,7 @@
 					</table>
 			</div>
 			<div id="Novena" class="data">
-				<div class = "heading">
-					<h1>Novena</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>First/Last train service terminating at NS1 EW24 Jurong East</p>
 				</div>
@@ -11350,9 +11350,7 @@
 							</table>
 			</div>
 			<div id="one-north" class="data">
-				<div class = "heading">
-					<h1>one-north</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>towards NE1 CC29 HarbourFront</p>
 				</div>
@@ -11557,9 +11555,7 @@
 						</table>
 			</div>
 			<div id="Orchard" class="data">
-				<div class = "heading">
-					<h1>Orchard</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>First/Last train service terminating at NS1 EW24 Jurong East</p>
 				</div>
@@ -11683,9 +11679,7 @@
 							</table>
 			</div>
 			<div id="OutramPark" class="data">
-				<div class = "heading">
-					<h1>Outram Park</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>First/Last train service terminating at EW33 Tuas Link</p>
 				</div>
@@ -11808,9 +11802,7 @@
 							</table>
 			</div>
 			<div id="PasirPanjang" class="data">
-				<div class = "heading">
-					<h1>Pasir Panjang</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>First/Last train service terminating at NE1 CC29 HarbourFront</p>
 				</div>
@@ -11975,9 +11967,7 @@
 						</table>
 			</div>
 			<div id="PasirRis" class="data">
-				<div class = "heading">
-					<h1>Pasir Ris</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>First/Last train service terminating at EW33 Tuas Link</p>
 				</div>
@@ -12060,9 +12050,7 @@
 				</table>
 			</div>
 			<div id="PayaLebar" class="data">
-				<div class = "heading">
-					<h1>Paya Lebar</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>First/Last train service terminating at EW33 Tuas Link</p>
 				</div>
@@ -12461,9 +12449,7 @@
 				</table>
 			</div>
 			<div id="Pending" class="data">
-				<div class = "heading">
-					<h1>Pending</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>Last train service terminating at BP6 P1 (Platform 1)</p>
 				</div>
@@ -12546,9 +12532,7 @@
 				</table>
 			</div>
 			<div id="Petir" class="data">
-				<div class = "heading">
-					<h1>Petir</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>Last train service terminating at BP6 P1 (Platform 1)</p>
 				</div>
@@ -12631,9 +12615,7 @@
 				</table>
 			</div>
 			<div id="Phoenix" class="data">
-				<div class = "heading">
-					<h1>Phoenix</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>Last train service terminating at BP6 P1 (Platform 1)</p>
 				</div>
@@ -12716,9 +12698,7 @@
 				</table>
 			</div>
 			<div id="Pioneer" class="data">
-				<div class = "heading">
-					<h1>Pioneer</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>First/Last train service terminating at EW33 Tuas Link</p>
 				</div>
@@ -12841,9 +12821,7 @@
 							</table>
 			</div>
 			<div id="Promenade" class="data">
-				<div class = "heading">
-					<h1>Promenade</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>towards NE1 CC29 HarbourFront</p>
 				</div>
@@ -13166,9 +13144,7 @@
 				</table>
 			</div>
 			<div id="Queenstown" class="data">
-				<div class = "heading">
-					<h1>Queenstown</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>First/Last train service terminating at EW33 Tuas Link</p>
 				</div>
@@ -13291,9 +13267,7 @@
 							</table>
 			</div>
 			<div id="RafflesPlace" class="data">
-				<div class = "heading">
-					<h1>Raffles Place</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>First/Last train service terminating at NS1 EW24 Jurong East</p>
 				</div>
@@ -13535,9 +13509,7 @@
 					</table>
 			</div>
 			<div id="Redhill" class="data">
-				<div class = "heading">
-					<h1>Redhill</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>First/Last train service terminating at EW33 Tuas Link</p>
 				</div>
@@ -13661,9 +13633,7 @@
 							</table>
 			</div>
 			<div id="Segar" class="data">
-				<div class = "heading">
-					<h1>Segar</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>Last train service terminating at BP6 P1 (Platform 1)</p>
 				</div>
@@ -13746,9 +13716,7 @@
 				</table>
 			</div>
 			<div id="Sembawang" class="data">
-				<div class = "heading">
-					<h1>Sembawang</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>First/Last train service terminating at NS1 EW24 Jurong East</p>
 				</div>
@@ -13951,9 +13919,7 @@
 				</table>
 			</div>
 			<div id="Senja" class="data">
-				<div class = "heading">
-					<h1>Senja</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>Last train service terminating at BP6 P1 (Platform 1)</p>
 				</div>
@@ -14036,9 +14002,7 @@
 				</table>
 			</div>
 			<div id="Serangoon" class="data">
-				<div class = "heading">
-					<h1>Serangoon</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>towards NE1 CC29 HarbourFront</p>
 				</div>
@@ -14319,9 +14283,7 @@
 				</table>
 			</div>
 			<div id="Simei" class="data">
-				<div class = "heading">
-					<h1>Simei</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>First/Last train service terminating at EW33 Tuas Link</p>
 				</div>
@@ -14445,9 +14407,7 @@
 							</table>
 			</div>
 			<div id="Somerset" class="data">
-				<div class = "heading">
-					<h1>Somerset</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>First/Last train service terminating at NS1 EW24 Jurong East</p>
 				</div>
@@ -14570,9 +14530,7 @@
 				</table>
 			</div>
 			<div id="SouthView" class="data">
-				<div class = "heading">
-					<h1>South View</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>Last train service terminating at BP6 P1 (Platform 1)</p>
 				</div>
@@ -14655,9 +14613,7 @@
 				</table>
 			</div>
 			<div id="Springleaf" class="data">
-				<div class = "heading">
-					<h1>Springleaf</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>First/Last train service terminating at TE1 Woodlands North</p>
 				</div>
@@ -15023,9 +14979,7 @@
 </table>
 			</div>
 			<div id="TaiSeng" class="data">
-				<div class = "heading">
-					<h1>Tai Seng</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>towards NE1 CC29 HarbourFront</p>
 				</div>
@@ -15267,9 +15221,7 @@
 				</table>
 			</div>
 			<div id="Tampines" class="data">
-				<div class = "heading">
-					<h1>Tampines</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>First/Last train service terminating at EW33 Tuas Link</p>
 				</div>
@@ -15392,9 +15344,7 @@
 						 </table>
 			</div>
 			<div id="TanahMerah" class="data">
-				<div class = "heading">
-					<h1>Tanah Merah</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>First/Last train service terminating at EW1 Pasir Ris</p>
 				</div>
@@ -15517,9 +15467,7 @@
 					 </table>
 			</div>
 			<div id="TanjongPagar" class="data">
-				<div class = "heading">
-					<h1>Tanjong Pagar</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>First/Last train service terminating at EW33 Tuas Link</p>
 				</div>
@@ -15642,9 +15590,7 @@
 				</table>
 			</div>
 			<div id="TeckWhye" class="data">
-				<div class = "heading">
-					<h1>Teck Whye</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>Last train service terminating at BP6 P1 (Platform 1)</p>
 				</div>
@@ -15728,9 +15674,7 @@
 				</table>
 			</div>
 			<div id="TelokBlangah" class="data">
-				<div class = "heading">
-					<h1>Telok Blangah</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>First/Last train service terminating at NE1 CC29 HarbourFront</p>
 				</div>
@@ -15893,9 +15837,7 @@
 						 </table>
 			</div>
 			<div id="TiongBahru" class="data">
-				<div class = "heading">
-					<h1>Tiong Bahru</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>First/Last train service terminating at EW33 Tuas Link</p>
 				</div>
@@ -16143,9 +16085,7 @@
 </table>
 			</div>
 			<div id="TuasCrescent" class="data">
-				<div class = "heading">
-					<h1>Tuas Crescent</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>First/Last train service terminating at EW33 Tuas Link</p>
 				</div>
@@ -16268,9 +16208,7 @@
 						</table>
 			</div>
 			<div id="TuasLink" class="data">
-				<div class = "heading">
-					<h1>Tuas Link</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>towards EW1 Pasir Ris</p>
 				</div>
@@ -16353,9 +16291,7 @@
 				</table>
 			</div>
 			<div id="TuasWestRoad" class="data">
-				<div class = "heading">
-					<h1>Tuas West Road</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>First/Last train service terminating at EW33 Tuas Link</p>
 				</div>
@@ -16478,9 +16414,7 @@
 				</table>
 			</div>
 			<div id="UpperThomson" class="data">
-				<div class = "heading">
-					<h1>Upper Thomson</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>First/Last train service terminating at TE1 Woodlands North</p>
 				</div>
@@ -16603,9 +16537,7 @@
 				</table>
 			</div>
 			<div id="Woodlands" class="data">
-				<div class = "heading">
-					<h1>Woodlands</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>First/Last train service terminating at NS1 EW24 Jurong East</p>
 				</div>
@@ -16886,9 +16818,7 @@
 				</table>
 			</div>
 			<div id="WoodlandsNorth" class="data">
-				<div class = "heading">
-					<h1>Woodlands North</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>First/Last train service terminating at TE9 Caldecott</p>
 				</div>
@@ -16937,9 +16867,7 @@
 				</table>
 			</div>
 			<div id="WoodlandsSouth" class="data">
-				<div class = "heading">
-					<h1>Woodlands South</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>First/Last train service terminating at TE1 Woodlands North</p>
 				</div>
@@ -17022,9 +16950,7 @@
 				</table>
 			</div>
 			<div id="YewTee" class="data">
-				<div class = "heading">
-					<h1>Yew Tee</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>First/Last train service terminating at NS1 EW24 Jurong East</p>
 				</div>
@@ -17186,9 +17112,7 @@
 				</table>
 			</div>
 			<div id="YioChuKang" class="data">
-				<div class = "heading">
-					<h1>Yio Chu Kang</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>First/Last train service terminating at NS1 EW24 Jurong East</p>
 				</div>
@@ -17430,9 +17354,7 @@
 				</table>
 			</div>
 			<div id="Yishun" class="data">
-				<div class = "heading">
-					<h1>Yishun</h1>
-				</div>
+				
 				<div class = "heading">
 					<p>First/Last train service terminating at NS1 EW24 Jurong East</p>
 				</div>
@@ -17640,7 +17562,6 @@
 
 		</div>
 				
-			
 	 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	 <script>
         $(document).ready(function() {
@@ -17649,17 +17570,6 @@
 		  $("#" + $(this).val()).fadeIn(700);
 		 }).change();
 		});
-		
-		var setTheme = localStorage.getItem('theme');
-		console.log('theme:', setTheme);
-		var element = document.body;
-		user(setTheme);
-		
-		function user(info){
-			if(info=="on"){
-			element.classList.toggle("dark-mode");
-			}
-		}
 	 </script>
 	</body>
 </html>

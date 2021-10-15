@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <title>MoveSG</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}"> 
 </head>
 <body>
 	<style>
@@ -17,7 +17,7 @@
 		font-family: 'Poppins', sans-serif;
 	}
 	.wrapper {
-		width: 1170px;
+		width: 80%;
 		margin: auto;
 	}
 	header {
@@ -61,6 +61,7 @@
 		height: 300px;
 		margin: 20% 30%;
 		text-align: center;
+		cursor: default;
 	}
 	.welcome-text h6 {
 		text-align: center;
@@ -86,52 +87,47 @@
 		color: #333;
 	}
 
-	@media (max-width:600px) {
+	@media (max-width:500px) {
 		.wrapper {
 			width: 100%;
-		}
-		.logo {
-			float: none;
-			width: 50%;
-			text-align: center;
-			margin: auto;
 		}
 		img {
 			width: 100%;
 		}
 		.nav-area {
-			float: none;
-			margin-top: 0;
+			padding-top: 0px;
+			position: absolute;
+			right: 40%;
+			text-align: center;
 		}
 		.nav-area li a {
-			padding: 5px;
-			font-size: 11px;
-		}
-		.nav-area {
-			text-align: center;
+			padding: 10px;
+			font-size: 13px;
 		}
 		.welcome-text {
 			width: 100%;
 			height: auto;
 			margin: 30% 0;
 		}
-		.welcome-text h1 {
-			font-size: 30px;
+		.welcome-text h6 {
+			font-size: 14px;
 		}
+	}
+	.dark-mode {
+			background-color: black;
+			color: white;
 	}
 	</style>
     <header>
     <div class="wrapper">
 		<ul class="nav-area">
 		<li><a href="/">Home</a></li>
-		<li><a href="suggestions/">Suggestions</a></li>
 		</ul>
 	</div>	
 		<div class="welcome-text">
-			<h6>The Aim for <span>MoveSG</span> was to provide tourists get familiarised with shortest Metro Routes<br>Throughout <span>Singapore</span></h6>	
-			<br><h6> Text <span>Text</span></h6>	
-			
-			<br><br><br><br><br><br><br><br><br><br><br><br><br><h6><span>&copy; MoveSG 2021</span></h6>
+			<h6>The Aim for <span>MoveSG</span> was to provide a way for tourists<br>to get familiarised with shortest Metro Routes<br>Throughout <span>Singapore</span></h6>	
+			<br><h6> Text <span>Text</span></h6>
+			<br><br><br><br><br><br><br><br><br><br><br><h6><span>&copy; MoveSG 2021</span></h6>
 		</div>
 	</div>
 	</header>

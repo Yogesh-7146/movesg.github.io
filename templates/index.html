@@ -15,20 +15,21 @@
 		font-family: 'Poppins', sans-serif;
 	}
 	.wrapper {
-		width: 100%;
+		width: 80%;
 		margin: auto;
 	}
 	header {
 		background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(https://c0.wallpaperflare.com/preview/1019/232/988/singapore-lrt-mrt-train.jpg);
-		height: 100%;
+		height: 100vh;
+		-webkit-background-size: cover;
 		background-size: cover;
-		background-position: center;
+		background-position: center center;
 		position: relative;
 	}
 	.nav-area {
-		float: right;
+		float: none;
 		list-style: none;
-		margin-top: 30px;
+		padding-top: 30px;
 	}
 	.nav-area li {
 		display: inline-block;
@@ -46,11 +47,11 @@
 		color: #333;
 	}
 	.logo {
-		float: center;
+		float: left;
 	}
 	.logo img {
 		width: 100%;
-		padding: 10px 0;
+		padding: 15px 0;
 	}
 	.welcome-text {
 		position: absolute;
@@ -58,12 +59,12 @@
 		height: 300px;
 		margin: 20% 30%;
 		text-align: center;
+		cursor: default;
 	}
 	.welcome-text h1 {
 		text-align: center;
 		color: #fff;
 		text-transform: uppercase;
-		font-size: 60px;
 	}
 	.welcome-text h1:hover{
 		color: #00fecb;
@@ -89,30 +90,21 @@
 		color: #333;
 	}
 
-	@media (max-width:600px) {
+	@media (max-width:500px) {
 		.wrapper {
 			width: 100%;
-		}
-		.logo {
-			background-color: rgba(0, 0, 0, 0.486);
-			float: none;
-  			background-blend-mode: overlay;
-			width: 100%;
-			text-align: center;
 		}
 		img {
 			width: 100%;
 		}
 		.nav-area {
-			float: none;
-			margin-top: 0;
+			padding-top: 30px;
+			position: static;
+			text-align: center;
 		}
 		.nav-area li a {
-			padding: 5px;
-			font-size: 11px;
-		}
-		.nav-area {
-			text-align: center;
+			padding: 10px;
+			font-size: 13px;
 		}
 		.welcome-text {
 			width: 100%;
@@ -122,48 +114,137 @@
 		.welcome-text h1 {
 			font-size: 30px;
 		}
+		.switch {
+			position: relative;
+			float: none;
+			width: 30px;
+			height: 17px;
+			right: 5%;
+		}
+		.slider {
+			position: absolute;
+			cursor: pointer;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-color: #ccc;
+			-webkit-transition: .2s;
+			transition: .2s;
+		}
+		.slider:before {
+			position: absolute;
+			content: "";
+			height: 13px;
+			width: 13px;
+			left: 2px;
+			bottom: 2px;
+			background-color: white;
+			-webkit-transition: .2s;
+			transition: .2s;
+		}
 	}
-	</style>
-    <header>
-        <!-- <div class="logo">
-            <img src="Logo/Logo_low.png" width=60 height=60/>
-		</div> -->
+	.dark-mode {
+			background-color: black;
+			color: white;
+	}
+	.switch {	
+		position: relative;
+		float: right;
+		width: 30px;
+		height: 17px;
+	}
+	.switch input {
+		opacity: 0;
+		width: 0;
+		height: 0;
+	}
+	.slider {
+		position: absolute;
+		cursor: pointer;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: #ccc;
+		-webkit-transition: .2s;
+		transition: .2s;
+	}
+	.slider:before {
+		position: absolute;
+		content: "";
+		height: 13px;
+		width: 13px;
+		left: 2px;
+		bottom: 2px;
+		background-color: white;
+		-webkit-transition: .2s;
+		transition: .2s;
+	}
+
+	input:checked+.slider {
+		background-color: #242424;
+	}
+	input:focus+.slider {
+		box-shadow: 0 0 1px #262729;
+	}
+	input:checked+.slider:before {
+		-webkit-transform: translateX(13px);
+		-ms-transform: translateX(13px);
+		transform: translateX(13px);
+	}
+
+	.slider.round {
+		border-radius: 17px;
+	}
+
+	.slider.round:before {
+		border-radius: 50%;
+	}
+</style>
+<header>
     <div class="wrapper">
 		<ul class="nav-area">
 			<li><a href="about/">About</a></li>
-			<li><a onclick="darktheme()">Theme</a></li>
-			</ul>
-			</div>
-			<div class="welcome-text">
-					<h1>Move<span>SG</span></h1>
-				<a href="map/">Map</a>
-				<a href="trainInfo/">Train Info</a>
-			</div>
+			<label class="switch">
+				<br><input id="def" onclick="darktheme()" type="checkbox">
+				<span class="slider round"></span>
+			</label>
+		</ul>
+	</div>
+	<div class="welcome-text">
+			<h1>Move<span>SG</span></h1>
+		<a href="map/">Map</a>
+		<a href="trainInfo/">Train Info</a>
+		<a href="busInfo/">Bus Info</a>
 	</div>
 	</header>
-
 	<script >
 		var setTheme = localStorage.getItem('theme');
 		console.log('theme:', setTheme);
 		var element = document.body;
 		user(setTheme);
 		
-		function user(info){
-			if(info=="on"){
-			element.classList.toggle("dark-mode");
-			}
-		}
-		function darktheme() {	
-			element.classList.toggle("dark-mode");
-			var val = localStorage.getItem('theme')	;
-			if(val=="on"){
-			localStorage.setItem('theme',"off");
+		function user(info) {
+			if (info == "on") {
+				element.classList.toggle("dark-mode");
+				def.checked=true;
 			}
 			else{
-			localStorage.setItem('theme',"on");
+				def.checked=false;
+			}
+		}
+		function darktheme() {
+			element.classList.toggle("dark-mode");
+			var val = localStorage.getItem('theme');
+			if (val == "on") {
+				localStorage.setItem('theme', "off");
+			}
+			else {
+				localStorage.setItem('theme', "on");
 			}
 			console.log('theme:', val);
-	}
+		}
 	</script>
 	</body>
 </html>
