@@ -391,43 +391,13 @@
 </style>
 
 <body>
-	<script>
-		var setTheme = localStorage.getItem('theme');
-		console.log('theme:', setTheme);
-		var element = document.body;
-		var def = document.getElementById("def");
-		user(setTheme);
-		function user(info) {
 
-			if (info == "on") {
-				element.classList.toggle("dark-mode");
-				def.checked = true;
-			}
-			else {
-				def.checked = false;
-			}
-		}
-
-	</script>
 	<button class="button" onclick="history.back()">&LessLess;</button>
 	<label class="switch">
 		<input id="def" onclick="darktheme()" type="checkbox">
 		<span class="slider round"></span>
 	</label>
-	<script>
 	
-		turn(setTheme);
-		function turn(info) {
-
-			if (info == "on") {
-			
-				def.checked = true;
-			}
-			else {
-				def.checked = false;
-			}
-		}
-	</script>
 	<div class="wrapper">
 		<div class="menu">
 			<select id="station">
@@ -17729,6 +17699,22 @@
 				$("#" + $(this).val()).fadeIn(700);
 			}).change();
 		});
+		var setTheme = localStorage.getItem('theme');
+		console.log('theme:', setTheme);
+		var element = document.body;
+		var def = document.getElementById("def");
+		user(setTheme);
+
+		function user(info) {
+			
+			if (info == "on") {
+				element.classList.toggle("dark-mode");
+				def.checked=true;
+			}
+			else{
+				def.checked=false;
+			}
+		}
 		function darktheme() {
 			element.classList.toggle("dark-mode");
 			var val = localStorage.getItem('theme');
