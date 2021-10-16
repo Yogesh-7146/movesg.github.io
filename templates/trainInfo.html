@@ -325,7 +325,6 @@
 			transition: .4s;
 			-webkit-tap-highlight-color: transparent;
 		}
-
 		.slider:before {
 			position: absolute;
 			content: "";
@@ -337,32 +336,27 @@
 			-webkit-transition: .4s;
 			transition: .4s;
 		}
-
 		input:checked+.slider {
 			background-color: #242424;
 		}
-
 		input:focus+.slider {
 			box-shadow: 0 0 1px #262729;
 		}
-
 		input:checked+.slider:before {
 			-webkit-transform: translateX(26px);
 			-ms-transform: translateX(26px);
 			transform: translateX(26px);
 		}
-
 		.slider.round {
 			border-radius: 34px;
 		}
-
 		.slider.round:before {
 			border-radius: 50%;
 		}
 	}
 	</style>
 	<body>
-		<button class="button" onclick="history.back()">&LessLess;</button>
+		<button class="button" onclick="location.href= '/'">&LessLess;</button>
 		<label class="switch">
 			<input id="def" onclick="darktheme()" type="checkbox" >
 			<span class="slider round"></span>
