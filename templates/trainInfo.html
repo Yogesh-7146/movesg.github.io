@@ -397,6 +397,35 @@
 		<input id="def" onclick="darktheme()" type="checkbox">
 		<span class="slider round"></span>
 	</label>
+	<script>
+		var setTheme = localStorage.getItem('theme');
+		console.log('theme:', setTheme);
+		var element = document.body;
+		var def = document.getElementById("def");
+		user(setTheme);
+
+		function user(info) {
+			
+			if (info == "on") {
+				element.classList.toggle("dark-mode");
+				def.checked=true;
+			}
+			else{
+				def.checked=false;
+			}
+		}
+		function darktheme() {
+			element.classList.toggle("dark-mode");
+			var val = localStorage.getItem('theme');
+			if (val == "on") {
+				localStorage.setItem('theme', "off");
+			}
+			else {
+				localStorage.setItem('theme', "on");
+			}
+			console.log('theme:', val);
+		}
+		</script>
 	
 	<div class="wrapper">
 		<div class="menu">
@@ -17699,33 +17728,7 @@
 				$("#" + $(this).val()).fadeIn(700);
 			}).change();
 		});
-		var setTheme = localStorage.getItem('theme');
-		console.log('theme:', setTheme);
-		var element = document.body;
-		var def = document.getElementById("def");
-		user(setTheme);
-
-		function user(info) {
-			
-			if (info == "on") {
-				element.classList.toggle("dark-mode");
-				def.checked=true;
-			}
-			else{
-				def.checked=false;
-			}
-		}
-		function darktheme() {
-			element.classList.toggle("dark-mode");
-			var val = localStorage.getItem('theme');
-			if (val == "on") {
-				localStorage.setItem('theme', "off");
-			}
-			else {
-				localStorage.setItem('theme', "on");
-			}
-			console.log('theme:', val);
-		}
+		
 
 	</script>
 </body>
