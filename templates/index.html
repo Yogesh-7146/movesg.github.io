@@ -57,7 +57,7 @@
 		position: absolute;
 		width: 600px;
 		height: 300px;
-		margin: 20% 30%;
+		margin: 2% 30%;
 		text-align: center;
 		cursor: default;
 	}
@@ -65,11 +65,13 @@
 		text-align: center;
 		color: #fff;
 		text-transform: uppercase;
+		display: inline;
 	}
 	.welcome-text h1:hover{
 		color: #00fecb;
 	}
 	.welcome-text h1 span {
+		text-align: center;
 		color: #00fecb;
 	}
 	.welcome-text h1 span:hover {
@@ -109,7 +111,7 @@
 		.welcome-text {
 			width: 100%;
 			height: auto;
-			margin: 30% 0;
+			margin: 4% 0;
 		}
 		.welcome-text h1 {
 			font-size: 30px;
@@ -142,6 +144,13 @@
 			background-color: white;
 			-webkit-transition: .2s;
 			transition: .2s;
+		}
+		.image{
+			margin-left: 30%;
+			margin-top: 15%;
+			margin-bottom: 0;
+			max-width: 40%;
+			max-height: 40%;
 		}
 	}
 	.dark-mode {
@@ -201,19 +210,26 @@
 	.slider.round:before {
 		border-radius: 50%;
 	}
+	.image{
+		/* margin: 10% 40%; \\Troblesome for Mobile View
+		margin-bottom: 0; */
+		max-width: 40%;
+		max-height: 40%;
+	}
 </style>
 <header>
     <div class="wrapper">
 		<ul class="nav-area">
-			<li><a href="about/">About</a></li>
+			<li><a href="about/">&emsp;&emsp;About</a></li>
 			<label class="switch">
 				<br><input id="def" onclick="darktheme()" type="checkbox">
 				<span class="slider round"></span>
 			</label>
 		</ul>
+		<img src="{{url_for('static', filename='Logo.png')}}" class="image" alt="MoveSG Logo">
 	</div>
 	<div class="welcome-text">
-			<h1>Move<span>SG</span></h1>
+		<h1>Move<span>SG</span></h1><br>
 		<a href="map/">Map</a>
 		<a href="trainInfo/">Train Info</a>
 		<a href="busInfo/">Bus Info</a>

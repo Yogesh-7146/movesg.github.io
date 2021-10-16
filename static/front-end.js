@@ -5,17 +5,27 @@
 	let bfs_nodes = []
 	let url = ''
 	
-	const charactersList = document.getElementById('charactersList');
-	const searchBar = document.getElementById('searchBar');
-	let stnList = [];
-	searchBar.addEventListener('keyup', (e) => {
-    const searchString = e.target.value.toLowerCase();
-    const filteredStns = stnList.filter((keys) => {
-        return (
-            stn.toLowerCase().includes(searchString)
-        );
-    });
-});
+// 	const charactersList = document.getElementById('charactersList');
+// 	const searchBar = document.getElementById('searchBarF');
+// 	let stnList = [];
+// 	searchBar.addEventListener('keyup', (e) => {
+//     const searchString = e.target.value.toLowerCase();
+//     const filteredStns = stnList.filter((keys) => {
+//         return (
+//             stn.toLowerCase().includes(searchString)
+//         );
+//     });
+// });
+const form = document.getElementById( "searchForm" );
+
+// ...and take over its submit event.
+form.addEventListener( "submit", function ( event ) {
+  event.preventDefault();
+  const formData = new FormData(form)
+  var url = "/api/v1/?start=" + formData.get('start') + "&end=" + formData.get('end');
+  getRequest(url);
+
+  })
 
 	function getStation(key){
 		var json_data = "stnName.json";
@@ -23,12 +33,12 @@
 		return stn.key
 	}
 	
-	document.getElementById("from").addEventListener("change", fromFunction);
+	//document.getElementById("searchBarF").addEventListener("change", fromFunction);
 	function fromFunction(e) {
-		var x = document.getElementById("from");
-		var json_data = $.getJSON("stnName.json"); 
-		var fromST = Object.keys(JSON.parse("json_data").find(x=>x===e.target.value))
-		console.log(fromST)
+		
+		// var json_data = $.getJSON("stnName.json"); 
+		// var fromST = Object.keys(JSON.parse("json_data").find(x=>x===e.target.value))
+		console.log(e.target.value)
 	}
 
 	// document.getElementById("to").addEventListener("change", toFunction);

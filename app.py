@@ -1,4 +1,6 @@
+from flask.templating import _render
 from graph import load_graph, shortest_path
+from busData import getBusInfo 
 from flask import Flask, request, render_template, jsonify
 import waitress
 import os
@@ -22,9 +24,12 @@ def map():
 def about():
 	return render_template('about.html')
 
-# @app.route('/suggestions/')
-# def about():
-# 	return render_template('suggestions.html')
+@app.route('/busInfo/', methods=['GET', 'POST'])
+def busInfo():
+	req = request.args
+	if request.method == "POST":
+		getBusInfo(req['start'], req['end'])
+	return render_template('busInfo.html')
 
 @app.route('/api/v1/')
 def api():
@@ -36,7 +41,8 @@ def api():
 		return jsonify({'route': route}), 200
 
 if __name__ == "__main__":
-     app.debug = False
-     port = int(os.environ.get('PORT', 33507))
-     waitress.serve(app, port=port)
-     app.run 
+	  app.debug = False
+	  port = int(os.environ.get('PORT', 33507))
+	  waitress.serve(app, port=port)
+	  app.run 
+# app.run(debug=True)

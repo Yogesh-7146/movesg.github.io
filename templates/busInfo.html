@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<style>
+		* {
+			font-family: sans-serif;
+		}
+		.heading{
+			padding: 8px;
+			margin: 15px 0;
+			margin-left: 5%;
+			margin-right: 5%;
+			font-family: 'Poppins', sans-serif;
+			background-color: #980000;
+			color: #ffffff;
+			font-size: 15px;
+			font-weight: bold;
+			text-align: center;
+			border-radius: 5px 5px 5px 5px;
+			box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+			-webkit-touch-callout: none;
+			-webkit-user-select: none;
+			-khtml-user-select: none; 
+			-moz-user-select: none;
+			-ms-user-select: none; 
+            user-select: none;
+		}
+		.heading span{
+			font-size: 20px;
+			line-height: 1.8;
+			font: bolder;
+		}
+		.button{
+			background-color: #006898;
+			border: none;
+			color: white;
+			padding: 7px 13px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin: 4px 4px;
+			cursor: pointer;
+			border-radius: 2px;
+		}
+		.instructions{  
+			background-color: #006898;
+			border: none;
+			color: white;
+			padding: 1px 5px;
+			font-family: 'Poppins', sans-serif;
+			text-align: center;
+			font-size: 10px;
+			margin: 5px 5px;
+			-webkit-touch-callout: none;
+			-webkit-user-select: none;
+			-khtml-user-select: none; 
+			-moz-user-select: none;
+			-ms-user-select: none; 
+            user-select: none;
+			-webkit-tap-highlight-color: transparent;
+		}
+		.button1 {
+				background-color: #006898;
+				color: white;
+				padding: 8px 23px;
+				text-align: center;
+				text-decoration: none;
+				display: inline-block;
+				font-size: 16px;
+				margin: 5px 6px;
+				cursor: pointer;
+				border-radius: 2px;
+				border-color:bisque;
+				-webkit-tap-highlight-color: transparent;
+		}
+		@media(max-width: 500px){
+			body {
+				padding: 25px;
+				background-color: white;
+				color: black;
+				font-size: 25px;
+			}
+			.heading{
+				padding: 8px;
+				margin-left: 3%;
+				margin-right: 3%;
+				font-family: 'Poppins', sans-serif;
+				background-color: #980000;
+				color: #ffffff;
+				font-size: 15px;
+				font-weight: bold;
+				text-align: center;
+				border-radius: 5px 5px 5px 5px;
+				box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+				-webkit-touch-callout: none;
+				-webkit-user-select: none;
+				-khtml-user-select: none; 
+				-moz-user-select: none;
+				-ms-user-select: none; 
+				user-select: none;
+				-webkit-tap-highlight-color: transparent;
+			}
+			.button {
+				background-color: #006898;
+				border: none;
+				color: white;
+				padding: 7px 13px;
+				text-align: center;
+				text-decoration: none;
+				display: inline-block;
+				font-size: 16px;
+				margin: 4px 4px;
+				cursor: pointer;
+				border-radius: 2px;
+				-webkit-tap-highlight-color: transparent;
+			}
+			.button1 {
+				background-color: #006898;
+				color: white;
+				padding: 8px 23px;
+				text-align: center;
+				text-decoration: none;
+				display: inline-block;
+				font-size: 16px;
+				margin: 5px 6px;
+				cursor: pointer;
+				border-radius: 2px;
+				border-color:bisque;
+				-webkit-tap-highlight-color: transparent;
+			}
+			.image{
+				margin-top: 5%;
+				align-self: center;
+				width: 310px;
+				height: 400px;
+				object-fit: none;
+				border: 5px solid black;
+				-webkit-filter: grayscale(100%);   
+				filter: grayscale(100%);
+				-webkit-touch-callout: none;
+				-webkit-user-select: none;
+				-khtml-user-select: none; 
+				-moz-user-select: none;
+				-ms-user-select: none; 
+				-webkit-tap-highlight-color: transparent;
+			}
+		}
+		.dark-mode {
+			background-color: black;
+			color: white;
+		}
+		.image{
+			margin-top: 5%;
+			align-self: center;
+			width: 310px;
+			height: 400px;
+			object-fit: none;
+			border: 5px solid black;
+			-webkit-filter: grayscale(100%);   
+			filter: grayscale(100%);
+			-webkit-touch-callout: none;
+			-webkit-user-select: none;
+			-khtml-user-select: none; 
+			-moz-user-select: none;
+			-ms-user-select: none; 
+			-webkit-tap-highlight-color: transparent;
+		}
+	</style>
+		<button class="button" onclick="history.back()">&LessLess;</button>
+		<div id="search">
+			<style>
+				input[type=text] {
+				width: 140px;
+				box-sizing: border-box;
+				border: 2px solid rgb(0, 189, 196);
+				border-radius: 4px;
+				font-size: 16px;
+				background-color: white;
+				background-image: url("{{url_for('static', filename='searchicon.png')}}");
+				background-size: 15px;
+				background-position: 10px 13px;
+				background-repeat: no-repeat;
+				padding: 12px 20px 12px 40px;
+				-webkit-transition: width 0.2s ease-in-out;
+				transition: width 0.2s ease-in-out;
+				margin: 5px 5px;
+				}
+				input[type=text]:focus {
+					width: 90%;
+				}
+				.searchWrapper{
+					position: relative;
+				}
+				.searchWrapper::after {
+					content: '🔍';
+					position: absolute;
+					top: 7px;
+					right: 15px;
+				}
+			</style>
+				<form id='busForm' >
+					<input type="text" name="start" id="fromInput" placeholder="From" value=''  /><br>
+					<input type="text" name="end" id="toInput" placeholder="To" value=''/>
+					<br><input type="submit" value="Get Bus Info" class= "button1">
+				</form>
+			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$('#myInput input').keydown(function(e){
+						if($(':input:eq(' + ($(':input').index(this) + 1) + ')').attr('type')=='submit'){
+							return true;
+						}
+						$(':input:eq(' + ($(':input').index(this) + 1) + ')').focus();
+						return false;
+					});
+				});
+			</script>
+		</div>
+		<div id='wrap'>
+			<img id='newImage' src="{{url_for('static', filename='result.png')}}" class = "image" />
+		</div>
+		
+		
+		<div class = "heading"><p>This section of app is still<br>
+			<span>UNDER DEVELOPMENT</span><br>
+			Unexpected errors can be encountered!</p>
+		</div>
+		<script>
+
+			var setTheme = localStorage.getItem('theme');
+			console.log('theme:', setTheme);
+			var element = document.body;
+			user(setTheme);
+			function user(info){
+				if(info=="on"){
+				element.classList.toggle("dark-mode");
+				}
+			}
+
+
+			var form = document.getElementById('busForm')
+			form.addEventListener( "submit", function ( event ) {
+  			event.preventDefault();
+  			const formData = new FormData(form)
+  			var url = "/busInfo/?start=" + formData.get('start') + "&end=" + formData.get('end');
+			  let request = new XMLHttpRequest();
+			request.open('POST', url, true);
+			request.send()
+			request.onload = function () {
+				if (this.status >= 200 && this.status < 400) {
+					window.location.reload()
+				}
+			}
+  })
+		</script>
+	</body>
+</html>
