@@ -141,10 +141,7 @@
 				-webkit-filter: grayscale(100%);   
 				filter: grayscale(100%);
 				-webkit-touch-callout: none;
-				-webkit-user-select: none;
-				-khtml-user-select: none; 
-				-moz-user-select: none;
-				-ms-user-select: none; 
+			
 				-webkit-tap-highlight-color: transparent;
 			}
 		}
@@ -152,6 +149,61 @@
 			background-color: black;
 			color: white;
 		}
+		.switch {
+				position: relative;
+				float: right;
+				width: 60px;
+				height: 34px;
+				-webkit-tap-highlight-color: transparent;
+			}
+			.switch input {
+				opacity: 0;
+				width: 0;
+				height: 0;
+			}
+			.slider {
+				position: absolute;
+				cursor: pointer;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background-color: #ccc;
+				-webkit-transition: .4s;
+				transition: .4s;
+				-webkit-tap-highlight-color: transparent;
+			}
+			.slider:before {
+				position: absolute;
+				content: "";
+				height: 26px;
+				width: 26px;
+				left: 4px;
+				bottom: 4px;
+				background-color: white;
+				-webkit-transition: .4s;
+				transition: .4s;
+			}
+			input:checked+.slider {
+				background-color: #242424;
+			}
+			input:focus+.slider {
+				box-shadow: 0 0 1px #262729;
+			}
+
+			input:checked+.slider:before {
+				-webkit-transform: translateX(26px);
+				-ms-transform: translateX(26px);
+				transform: translateX(26px);
+			}
+
+			.slider.round {
+				border-radius: 34px;
+			}
+
+			.slider.round:before {
+				border-radius: 50%;
+			}
 		.image{
 			margin-top: 5%;
 			align-self: center;
@@ -162,14 +214,14 @@
 			-webkit-filter: grayscale(100%);   
 			filter: grayscale(100%);
 			-webkit-touch-callout: none;
-			-webkit-user-select: none;
-			-khtml-user-select: none; 
-			-moz-user-select: none;
-			-ms-user-select: none; 
+			
 			-webkit-tap-highlight-color: transparent;
 		}
 	</style>
 		<button class="button" onclick="history.back()">&LessLess;</button>
+		<label class="switch"><input id="def" onclick="darktheme()" type="checkbox" >
+			<span class="slider round"></span>
+			</label>
 		<div id="search">
 			<style>
 				input[type=text] {
@@ -229,15 +281,32 @@
 			Unexpected errors can be encountered!</p>
 		</div>
 		<script>
-
-			var setTheme = localStorage.getItem('theme');
+	var setTheme = localStorage.getItem('theme');
 			console.log('theme:', setTheme);
 			var element = document.body;
+			var def = document.getElementById("def");
 			user(setTheme);
-			function user(info){
-				if(info=="on"){
-				element.classList.toggle("dark-mode");
+	
+			function user(info) {
+				
+				if (info == "on") {
+					element.classList.toggle("dark-mode");
+					def.checked=true;
 				}
+				else{
+					def.checked=false;
+				}
+			}
+			function darktheme() {
+				element.classList.toggle("dark-mode");
+				var val = localStorage.getItem('theme');
+				if (val == "on") {
+					localStorage.setItem('theme', "off");
+				}
+				else {
+					localStorage.setItem('theme', "on");
+				}
+				console.log('theme:', val);
 			}
 
 
