@@ -414,6 +414,20 @@
 		<input id="def" onclick="darktheme()" type="checkbox">
 		<span class="slider round"></span>
 	</label>
+	<script>
+	
+		turn(setTheme);
+		function turn(info) {
+
+			if (info == "on") {
+			
+				def.checked = true;
+			}
+			else {
+				def.checked = false;
+			}
+		}
+	</script>
 	<div class="wrapper">
 		<div class="menu">
 			<select id="station">
