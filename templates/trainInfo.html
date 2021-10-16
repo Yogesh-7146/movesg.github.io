@@ -370,17 +370,7 @@
 				element.classList.toggle("dark-mode");
 				}
 			}
-		function darktheme() {
-			element.classList.toggle("dark-mode");
-			var val = localStorage.getItem('theme');
-			if (val == "on") {
-				localStorage.setItem('theme', "off");
-			}
-			else {
-				localStorage.setItem('theme', "on");
-			}
-			console.log('theme:', val);
-		}
+		
 		</script>
 		<button class="button" onclick="history.back()">&LessLess;</button>
 		<label class="switch">
@@ -17687,6 +17677,18 @@
 		  $("#" + $(this).val()).fadeIn(700);
 		 }).change();
 		});
+		function darktheme() {
+			element.classList.toggle("dark-mode");
+			var val = localStorage.getItem('theme');
+			if (val == "on") {
+				localStorage.setItem('theme', "off");
+			}
+			else {
+				localStorage.setItem('theme', "on");
+			}
+			console.log('theme:', val);
+		}
+		
 	 </script>
 	</body>
 </html>
